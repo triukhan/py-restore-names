@@ -1,6 +1,5 @@
 import pytest
 from app.restore_names import restore_names
-from copy import copy
 
 
 @pytest.mark.parametrize("users, expected_users", [
@@ -35,4 +34,3 @@ from copy import copy
 def test_restores_names(users: list, expected_users: list) -> None:
     restore_names(users)
     assert users == expected_users
-
